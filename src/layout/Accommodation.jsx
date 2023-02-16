@@ -1,7 +1,7 @@
 function Accommodation() {
   return (
     <>
-      <p>[Accommodation]</p>
+      <h1>[Accommodation]</h1>
     </>
   )
 }

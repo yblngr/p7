@@ -1,0 +1,131 @@
+/*
+** Animations
+*/
+
+// Loader
+// Animation principale
+$plate-size: 200px;
+$loader-duration: 3000ms;
+
+@keyframes loader {
+
+  from,
+  80% {
+    opacity: 1;
+  }
+
+  99%,
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
+
+// Logo
+@keyframes logo {
+
+  from,
+  80% {
+    color: $tertiary-color;
+  }
+
+  to {
+    color: $logo-text-color;
+  }
+}
+
+// Fourchette
+@keyframes fork {
+  from {
+    transform-origin: 50% 97.5%;
+    transform: scale(0.5) translateY(-97.5%) rotate(-720deg);
+  }
+
+  75% {
+    transform-origin: 50% 97.5%;
+    transform: scale(0.5) translateY(-97.5%) rotate(-270deg);
+  }
+
+  to {
+    transform: scale(1) translateX(-0.625*$plate-size);
+  }
+}
+
+// Couteau
+@keyframes knife {
+  from {
+    transform-origin: 50% 97.5%;
+    transform: scale(.5) translateY(-97.5%) rotate(-1440deg);
+  }
+
+  75% {
+    transform-origin: 50% 97.5%;
+    transform: scale(.5) translateY(-97.5%) rotate(-90deg);
+  }
+
+  to {
+    transform: scale(1) translateX(0.625*$plate-size);
+  }
+}
+
+// Icône 'favori' (restaurants et en-tête des restaurants)
+$like-size: 22px;
+$like-thickness: 1px;
+
+@keyframes like-hide {
+
+  0%,
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes like-grow {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0.4375*$like-size) scale(0.0);
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(calc(1 + 2*$like-thickness/$like-size));
+  }
+}
+
+// Apparition des plats du menu
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Rotation de la coche au survol d'un plat
+@keyframes spin {
+
+  from,
+  60% {
+    transform: rotate(-270deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}

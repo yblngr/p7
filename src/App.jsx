@@ -1,13 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Layout from './pages/Layout'
-import Home from './pages/Home'
-import Accommodation from './pages/Accommodation'
-import About from './pages/About'
-import NotFound from './pages/NotFound'
+import Layout from './layout/Layout'
+import Home from './layout/Home'
+import Accommodation from './layout/Accommodation'
+import About from './layout/About'
+import NotFound from './layout/NotFound'
 
 function App() {
-  //return <h1>Agence de location Kasa</h1>
   return (
     <BrowserRouter>
       <Routes>

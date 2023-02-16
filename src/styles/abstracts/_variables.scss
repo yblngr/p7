@@ -1,0 +1,36 @@
+// Variables Sass
+
+// Polices de caractères
+// URL de base des ressources (polices de caractères, images, etc.)
+// $base-url: '../assets/' !default;
+
+// Pile de polices de caractères par défaut
+// $font-stack-default: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+$font-stack: 'Montserrat', sans-serif;
+
+// Couleurs
+// Couleurs de l'identité graphique
+$primary-color: #ff6060;
+$secondary-color: #ffffff;
+$tertiary-color: #868686;
+
+// Couleurs de texte
+$primary-text-color: $primary-color;
+$secondary-text-color: $secondary-color;
+
+// Couleurs de fond
+$primary-background-color: $secondary-color;
+$secondary-background-color: $primary-color;
+$tertiary-background-color: $tertiary-color;
+$footer-background-color: #000000;
+
+// Ombre portée des cartes
+// $shadow-color: scale-color($general-background-color, $lightness: -10.6%);
+
+// Breakpoints
+$breakpoints: (
+  'min': 240px,
+  'mobile': 768px,
+  'tablet': 992px,
+  'max': 1440px,
+);

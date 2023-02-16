@@ -1,0 +1,50 @@
+/*
+** Styles de base
+*/
+
+// Modèle de boîte
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Suppression des marges des éléments
+
+body,
+p,
+// h1,
+// h2,
+// h3,
+// h4,
+ol,
+ul {
+  margin: 0;
+}
+
+// Corps de la page
+
+body {
+  background-color: $primary-background-color;
+  color: $primary-text-color;
+}
+
+// Listes sans puces, ni numérotation, ni retrait
+
+ol,
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+// Ancres
+
+a {
+  color: $primary-text-color;
+  text-decoration: none;
+}

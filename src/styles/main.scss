@@ -1,0 +1,27 @@
+@charset 'utf-8';
+
+// 1. Abstracts - Outils et helpers Sass
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// 2. Vendors - Bibliothèques et frameworks externes
+// Create React App fournit @import-normalize pour la réinitialisation CSS
+@import-normalize;
+
+// 3. Base - Styles standards
+@import 'base/base';
+@import 'base/typography';
+// @import 'base/animations';
+
+// 4. Layout - Mise en page
+@import 'layout/Layout';
+@import 'layout/Header';
+@import 'layout/Footer';
+
+// 5. Components - Composants
+@import 'components/Logo';
+
+// 6. Pages - Styles spécifiques des pages
+
+// 7. Themes - Thèmes du site

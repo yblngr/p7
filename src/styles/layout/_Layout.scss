@@ -1,0 +1,9 @@
+body {
+  min-width: map-get($breakpoints, 'min');
+}
+
+.container {
+  max-width: map-get($breakpoints, 'max');
+  margin-left: auto;
+  margin-right: auto;
+}
