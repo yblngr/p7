@@ -12,15 +12,19 @@
 // 3. Base - Styles standards
 @import 'base/base';
 @import 'base/typography';
+
 // @import 'base/animations';
 
 // 4. Layout - Mise en page
 @import 'layout/Layout';
 @import 'layout/Header';
+@import 'layout/Home';
 @import 'layout/Footer';
 
 // 5. Components - Composants
 @import 'components/Logo';
+@import 'components/Banner';
+@import 'components/Card';
 
 // 6. Pages - Styles spécifiques des pages
 

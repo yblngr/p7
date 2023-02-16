@@ -1,5 +1,9 @@
 function Card() {
-  return 1
+  return (
+    <>
+      <div>Ceci est une carte</div>
+    </>
+  )
 }
 
 export default Card

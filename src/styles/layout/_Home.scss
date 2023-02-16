@@ -1,0 +1,11 @@
+main.home {
+  & .container {
+    padding: 63px 100px 0 100px;
+  }
+
+  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+    & .container {
+      padding: 16px 20px 0 20px;
+    }
+  }
+}
