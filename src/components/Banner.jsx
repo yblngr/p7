@@ -1,9 +1,11 @@
-import photo from '../assets/banner.png'
+import bannerImage from '../assets/banner.png'
 
 function Banner() {
   return (
     <figure className="banner">
-      <img src={photo} alt="image logo" width="600" />
+      <div className="mask">
+        <img src={bannerImage} alt="Bannière" />
+      </div>
       <figcaption>Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs</figcaption>
     </figure>
   )

@@ -1,12 +1,21 @@
-import imagecard from '../assets/photo.png'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-function Card() {
+function Card({ id, title, cover }) {
   return (
-    <div className="card">
-      <img src={imagecard} alt="photo" />
-      <p>Titre de la location</p>
-    </div>
+    <Link className="card" to={`/accommodation/${id}`}>
+      <div className="mask">
+        <img src={cover} alt={title} />
+      </div>
+      <p>{title}</p>
+    </Link>
   )
+}
+
+Card.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  cover: PropTypes.string,
 }
 
 export default Card

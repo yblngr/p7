@@ -3,20 +3,13 @@ import Card from '../components/Card'
 import accommodations from '../assets/logements.json'
 
 function Home() {
-  console.table(accommodations)
   return (
     <main className="home">
-      <div className="sized">
-        <Banner />
-        <div className="cardset">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
+      <Banner />
+      <div className="cardset">
+        {accommodations.map(({ id, title, cover }) => (
+          <Card key={id} id={id} title={title} cover={cover} />
+        ))}
       </div>
     </main>
   )
