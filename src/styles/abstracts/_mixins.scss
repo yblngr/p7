@@ -1,14 +1,14 @@
 // Mixins Sass
 
-/// Limitation de la largeur du contenu sur la page
-/// @param {Length} $padding [20px] - remplissage gauche et droit
-// @mixin container($padding: 20px) {
-//   max-width: map-get($breakpoints, "bp-max");
-//   padding-left: $padding;
-//   padding-right: $padding;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+/// Limitation de largeur du contenu et centrage automatique
+/// @param {Length} $padding [0px] emplissage gauche et droit
+@mixin sized($padding: 0px) {
+  max-width: map-get($breakpoints, 'max');
+  padding-left: $padding;
+  padding-right: $padding;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /// Conteneur flex et centrage des éléments flex
 /// @param {Boolean} $justify-content [true] - éléments centrés sur l'axe principal

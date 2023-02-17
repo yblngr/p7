@@ -1,11 +1,30 @@
 main.home {
-  & .container {
-    padding: 63px 100px 0 100px;
+  @include sized(100px);
+  margin-top: 63px;
+  margin-bottom: 63px;
+
+  .cardset {
+    margin-top: 43px;
+    background-color: $tertiary-background-color;
+    border-radius: 25px;
+    padding: 56px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 50px;
   }
 
   @media screen and (width <= map-get($breakpoints, 'mobile')) {
-    & .container {
-      padding: 16px 20px 0 20px;
+    @include sized(20px);
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    .cardset {
+      margin-top: 22px;
+      padding: 0;
+      column-gap: 20px;
+      row-gap: 20px;
+      background-color: unset;
     }
   }
 }

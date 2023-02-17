@@ -3,7 +3,6 @@
 */
 
 // Modèle de boîte
-
 html {
   box-sizing: border-box;
 }
@@ -15,28 +14,15 @@ html {
 }
 
 // Suppression des marges des éléments
-
 body,
 figure,
 p,
-// h1,
-// h2,
-// h3,
-// h4,
 ol,
 ul {
   margin: 0;
 }
 
-// Corps de la page
-
-body {
-  background-color: $primary-background-color;
-  color: $primary-text-color;
-}
-
 // Listes sans puces, ni numérotation, ni retrait
-
 ol,
 ul {
   list-style-type: none;
@@ -44,8 +30,14 @@ ul {
 }
 
 // Ancres
-
 a {
   color: $primary-text-color;
   text-decoration: none;
+}
+
+// Corps de la page : couleurs par défaut et largeur minimale
+body {
+  background-color: $primary-background-color;
+  color: $primary-text-color;
+  min-width: map-get($breakpoints, 'min');
 }

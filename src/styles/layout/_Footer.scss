@@ -1,33 +1,30 @@
 footer {
   background-color: $footer-background-color;
   color: $secondary-text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 66px;
+  padding-bottom: 29px;
 
-  & .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 66px 100px 29px 100px;
-  }
-
-  & .logo {
+  .logo {
     background-color: $secondary-text-color;
     width: 122px;
     height: 40px;
     flex: none;
   }
 
-  & p {
+  p {
     font-size: 24px;
     font-weight: 500;
     margin-top: 29px;
   }
 
   @media screen and (width <= map-get($breakpoints, 'mobile')) {
-    & .container {
-      padding: 62px 20px 62px 20px;
-    }
+    padding-top: 62px;
+    padding-bottom: 62px;
 
-    & p {
+    p {
       font-size: 12px;
     }
   }

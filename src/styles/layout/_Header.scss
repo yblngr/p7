@@ -1,44 +1,42 @@
 header {
-  & .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 100px 0 100px;
-  }
+  @include sized(100px);
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  & .logo {
+  .logo {
     background-color: $primary-text-color;
     width: 211px;
     height: 68px;
     flex: none;
   }
 
-  & ul {
+  ul {
     display: flex;
   }
 
-  & li {
+  li {
     font-size: 24px;
     font-weight: 500;
     margin-left: 60px;
   }
 
-  & a.active,
-  & a:hover {
+  a.active,
+  a:hover {
     text-decoration: underline;
   }
 
   @media screen and (width <= map-get($breakpoints,'mobile')) {
-    & .container {
-      padding: 20px 20px 0 20px;
-    }
+    @include sized(20px);
+    margin-top: 20px;
 
-    & .logo {
+    .logo {
       width: 145px;
       height: 47px;
     }
 
-    & li {
+    li {
       font-size: 12px;
       text-transform: uppercase;
       margin-left: 12px;
