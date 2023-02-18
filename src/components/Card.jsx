@@ -13,9 +13,9 @@ function Card({ id, title, cover }) {
 }
 
 Card.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
-  cover: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
 }
 
 export default Card

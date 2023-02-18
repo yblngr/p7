@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom'
-
-import accommodations from '../assets/logements.json'
+import accommodations from '../assets/accommodations.json'
 
 function Accommodation() {
   const { id } = useParams()
@@ -30,6 +29,10 @@ function Accommodation() {
       <p>{acc.location}</p>
       <h2>equipments</h2>
       {acc.equipments.map((elt, index) => (
+        <p key={index}>{elt}</p>
+      ))}
+      <h2>tags</h2>
+      {acc.tags.map((elt, index) => (
         <p key={index}>{elt}</p>
       ))}
     </>

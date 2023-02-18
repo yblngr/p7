@@ -1,14 +1,19 @@
-import bannerImage from '../assets/banner.png'
+import PropTypes from 'prop-types'
 
-function Banner() {
+function Banner({ image, text }) {
   return (
     <figure className="banner">
       <div className="mask">
-        <img src={bannerImage} alt="Bannière" />
+        <img src={image} alt="Bannière" />
       </div>
-      <figcaption>Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs</figcaption>
+      <figcaption>{text}</figcaption>
     </figure>
   )
+}
+
+Banner.propTypes = {
+  image: PropTypes.string.isRequired,
+  text: PropTypes.string,
 }
 
 export default Banner
