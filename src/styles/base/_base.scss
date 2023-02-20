@@ -31,13 +31,13 @@ ul {
 
 // Ancres
 a {
-  color: $primary-text-color;
+  color: $primary-color;
   text-decoration: none;
 }
 
 // Corps de la page : couleurs par défaut et largeur minimale
 body {
-  background-color: $primary-background-color;
-  color: $primary-text-color;
+  background-color: $secondary-color;
+  color: $primary-color;
   min-width: map-get($breakpoints, 'min');
 }

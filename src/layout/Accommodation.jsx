@@ -4,7 +4,7 @@ import accommodations from '../assets/accommodations.json'
 function Accommodation() {
   const { id } = useParams()
   const acc = accommodations.find((elt) => elt.id === id)
-  console.log(acc)
+  // console.log(acc)
   return (
     <>
       <h1>[Accommodation id {id}]</h1>

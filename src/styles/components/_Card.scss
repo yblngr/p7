@@ -33,7 +33,7 @@ main.home .card {
     margin-right: 20px;
     bottom: 20px;
     font-weight: 500;
-    color: $secondary-text-color;
+    color: $secondary-color;
   }
 
   @media screen and (width <= map-get($breakpoints, 'mobile')) {

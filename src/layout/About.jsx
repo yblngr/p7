@@ -1,5 +1,5 @@
-import React from 'react'
 import Banner from '../components/Banner'
+import Collapse from '../components/Collapse'
 import aboutBanner from '../assets/about-banner.png'
 import about from '../assets/about.json'
 
@@ -8,10 +8,9 @@ function About() {
     <main className="about">
       <Banner image={aboutBanner} />
       {about.map(({ title, content }, index) => (
-        <React.Fragment key={`about-${index}`}>
-          <h1>{title}</h1>
+        <Collapse key={`about-${index}`} title={title}>
           <p>{content}</p>
-        </React.Fragment>
+        </Collapse>
       ))}
     </main>
   )

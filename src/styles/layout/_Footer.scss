@@ -1,6 +1,6 @@
 footer {
-  background-color: $footer-background-color;
-  color: $secondary-text-color;
+  background-color: $quaternary-color;
+  color: $secondary-color;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@ footer {
   padding-bottom: 29px;
 
   .logo {
-    background-color: $secondary-text-color;
+    background-color: $secondary-color;
     width: 122px;
     height: 40px;
     flex: none;
