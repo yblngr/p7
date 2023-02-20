@@ -1,0 +1,44 @@
+main.not-found {
+  @include sized(100px);
+  text-align: center;
+
+  div {
+    font-size: 288px;
+    font-weight: 700;
+    margin-top: 169px;
+  }
+
+  p {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 66px;
+  }
+
+  .link {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-top: 182px;
+    margin-bottom: 159px;
+  }
+
+  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+    @include sized(20px);
+
+    div {
+      font-size: 96px;
+      margin-top: 195px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 11px;
+    }
+
+    .link {
+      font-size: 14px;
+      margin-top: 133px;
+      margin-bottom: 235px;
+    }
+  }
+}
