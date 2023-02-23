@@ -2,24 +2,21 @@ header {
   @include sized(100px);
   margin-top: 40px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 
   .logo {
-    background-color: $primary-color;
-    width: 211px;
-    height: 68px;
     flex: none;
   }
 
   ul {
     display: flex;
+    gap: 60px;
   }
 
   li {
     font-size: 24px;
     font-weight: 500;
-    margin-left: 60px;
   }
 
   a.active,
@@ -36,10 +33,13 @@ header {
       height: 47px;
     }
 
+    ul {
+      gap: 12px;
+    }
+
     li {
       font-size: 12px;
       text-transform: uppercase;
-      margin-left: 12px;
     }
   }
 }

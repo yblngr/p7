@@ -1,12 +1,16 @@
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import styles from './Banner.module.scss'
 
-function Banner({ image, text }) {
+function Banner({ image, text, className }) {
+  const extClassName = classNames(styles.default, className)
+
   return (
-    <figure className="banner">
-      <div className="mask">
-        <img src={image} alt="Bannière" />
+    <figure className={extClassName}>
+      <div>
+        <img src={image} alt="Banner" />
       </div>
-      <figcaption>{text}</figcaption>
+      {text && <figcaption>{text}</figcaption>}
     </figure>
   )
 }
@@ -14,6 +18,7 @@ function Banner({ image, text }) {
 Banner.propTypes = {
   image: PropTypes.string.isRequired,
   text: PropTypes.string,
+  className: PropTypes.string,
 }
 
 export default Banner

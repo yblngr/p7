@@ -1,0 +1,21 @@
+.tags {
+  display: flex;
+  column-gap: 10px;
+  //justify-content: flex-start;
+  //align-items: center;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 115px;
+    height: 25px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 10px;
+    //flex: 1 0 auto;
+  }
+}

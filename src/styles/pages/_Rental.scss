@@ -1,0 +1,48 @@
+main.rental {
+  @include sized(100px);
+
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content-location {
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 500;
+  }
+  .location {
+    font-weight: 500;
+  }
+
+  .tags {
+    margin-top: 20px;
+  }
+
+  .content-host {
+  }
+
+  .host {
+    display: flex;
+  }
+
+  .rating {
+  }
+
+  .content-details {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    column-gap: 76px;
+  }
+
+  .description {
+    width: 50%;
+  }
+
+  .equipments {
+    width: 50%;
+  }
+}

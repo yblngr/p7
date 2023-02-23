@@ -12,22 +12,25 @@
 // 3. Base - Styles standards
 @import 'base/base';
 @import 'base/typography';
-
 // @import 'base/animations';
 
 // 4. Layout - Mise en page
 @import 'layout/Header';
-@import 'layout/Home';
-@import 'layout/About';
-@import 'layout/NotFound';
 @import 'layout/Footer';
 
 // 5. Components - Composants
-@import 'components/Logo';
-@import 'components/Banner';
+// @import 'components/Logo';
+// @import 'components/Banner';
 @import 'components/Card';
-@import 'components/Collapse';
+// @import 'components/Collapse';
+@import 'components/Slideshow';
+@import 'components/Tags';
 
 // 6. Pages - Styles spécifiques des pages
+@import 'pages/Home';
+@import 'pages/Rental';
+@import 'pages/About';
+@import 'pages/NotFound';
+@import 'pages/Test';
 
 // 7. Themes - Thèmes du site

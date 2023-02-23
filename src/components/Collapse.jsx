@@ -1,7 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
+import styles from './Collapse.module.scss'
 
 function Collapse({ title, children }) {
+  console.log(styles)
+
   const [isOpen, toggleIsOpen] = useState(false)
   const contentBox = useRef()
   const chevron = useRef()
@@ -12,13 +15,13 @@ function Collapse({ title, children }) {
   })
 
   return (
-    <div className="collapse">
-      <div className="title-box" onClick={() => toggleIsOpen(!isOpen)}>
-        <p className="title">{title}</p>
-        <div className="chevron" ref={chevron}></div>
+    <div className={styles.collapse}>
+      <div className={styles['title-box']} onClick={() => toggleIsOpen(!isOpen)}>
+        <p className={styles.title}>{title}</p>
+        <div className={styles.chevron} ref={chevron}></div>
       </div>
-      <div className="content-box" ref={contentBox}>
-        <div className="content">{children}</div>
+      <div className={styles['content-box']} ref={contentBox}>
+        <div className={styles.content}>{children}</div>
       </div>
     </div>
   )
@@ -26,7 +29,8 @@ function Collapse({ title, children }) {
 
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]).isRequired,
+  className: PropTypes.string,
 }
 
 export default Collapse
