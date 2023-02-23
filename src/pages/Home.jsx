@@ -1,6 +1,6 @@
 import Banner from '../components/Banner'
 import Card from '../components/Card'
-import homeBanner from '../assets/images/home-banner.png'
+import homeBanner from '../assets/images/home.webp'
 import rentals from '../assets/data/rentals.json'
 
 function Home() {
