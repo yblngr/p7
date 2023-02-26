@@ -4,9 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './Logo.module.scss'
 
 function Logo({ className }) {
-  const extClassName = classNames(styles.default, className)
-
-  return <LogoSvg className={extClassName} />
+  return <LogoSvg className={classNames(styles.default, className)} />
 }
 
 Logo.propTypes = {

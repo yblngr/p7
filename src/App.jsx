@@ -4,8 +4,9 @@ import Layout from './layout/Layout'
 import Home from './pages/Home'
 import Rental from './pages/Rental'
 import About from './pages/About'
-import Test from './pages/Test'
 import NotFound from './pages/NotFound'
+
+import Test from './test/Test'
 
 function App() {
   return (

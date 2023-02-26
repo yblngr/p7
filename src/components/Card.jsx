@@ -4,10 +4,8 @@ import PropTypes from 'prop-types'
 import styles from './Card.module.scss'
 
 function Card({ id, title, cover, className }) {
-  const extClassName = classNames(styles.default, className)
-
   return (
-    <Link className={extClassName} to={`/rental/${id}`}>
+    <Link className={classNames(styles.default, className)} to={`/rental/${id}`}>
       <div>
         <img src={cover} alt={title} />
       </div>

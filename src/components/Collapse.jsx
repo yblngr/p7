@@ -5,7 +5,6 @@ import Chevron from '../components/Chevron'
 import styles from './Collapse.module.scss'
 
 function Collapse({ title, titleHeight, children, className }) {
-  const extClassName = classNames(styles.default, className)
   const [isOpen, toggleIsOpen] = useState(false)
   const titlebox = useRef(null)
 
@@ -32,7 +31,7 @@ function Collapse({ title, titleHeight, children, className }) {
   })
 
   return (
-    <div className={extClassName}>
+    <div className={classNames(styles.default, className)}>
       <div className={styles['title-box']} ref={titlebox} onClick={() => toggleIsOpen(!isOpen)}>
         <p className={styles.title}>
           {title} {windowWidth}

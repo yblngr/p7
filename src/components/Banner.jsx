@@ -3,10 +3,8 @@ import PropTypes from 'prop-types'
 import styles from './Banner.module.scss'
 
 function Banner({ image, text, className }) {
-  const extClassName = classNames(styles.default, className)
-
   return (
-    <figure className={extClassName}>
+    <figure className={classNames(styles.default, className)}>
       <div>
         <img src={image} alt="Banner" />
       </div>
