@@ -12,7 +12,7 @@ function Rental() {
 
   return (
     <main className="rental">
-      <Slideshow className="pictures" pictures={pictures}></Slideshow>
+      <Slideshow pictures={pictures}></Slideshow>
       <div className="content-header">
         <div className="content-location">
           <div className="title">{title}</div>
@@ -31,12 +31,12 @@ function Rental() {
       </div>
       <div className="content-details">
         <div className="description">
-          <Collapse title="Description">
+          <Collapse title="Description" titleHeight="52px">
             <p>{description}</p>
           </Collapse>
         </div>
         <div className="equipments">
-          <Collapse title="&Eacute;quipements">
+          <Collapse title="&Eacute;quipements" titleHeight="52px">
             <ul>
               {equipments.map((equipment, index) => (
                 <li key={`equipment-${index}`}>{equipment}</li>

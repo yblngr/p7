@@ -1,13 +1,13 @@
 main.about {
   @include sized(100px);
   margin-top: 44px;
-  margin-bottom: 44px;
 
   .banner {
     height: 223px;
   }
 
   .collapse {
+    font-size: 24px;
     width: 82.5%;
     margin: 31px auto;
   }
@@ -15,7 +15,6 @@ main.about {
   @media screen and (width <= map-get($breakpoints, 'mobile')) {
     @include sized(20px);
     margin-top: 17px;
-    margin-bottom: 17px;
 
     .collapse {
       width: 100%;

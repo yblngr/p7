@@ -7,12 +7,10 @@ function About() {
   return (
     <main className="about">
       <Banner className="banner" image={aboutBanner} />
-      {about.map(({ title, content }, index) => (
-        <div className="collapse" key={`about-${index}`}>
-          <Collapse title={title}>
-            <p>{content}</p>
-          </Collapse>
-        </div>
+      {about.map(({ headline, article }, index) => (
+        <Collapse className="collapse" key={`about-${index}`} title={headline}>
+          <p>{article}</p>
+        </Collapse>
       ))}
     </main>
   )

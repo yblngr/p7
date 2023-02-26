@@ -1,13 +1,10 @@
 import './Test.scss'
 
-import Logo from '../components/Logo'
-
 function Test() {
   return (
-    <>
-      <Logo />
-      <Logo className="rajout" />
-    </>
+    <div>
+      <h1>Page de test</h1>
+    </div>
   )
 }
 

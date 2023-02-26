@@ -45,4 +45,9 @@ main.rental {
   .equipments {
     width: 50%;
   }
+
+  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+    .content-details {
+    }
+  }
 }

@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
+import './Slideshow.scss'
 
-function Slideshow({ pictures, className }) {
+function Slideshow({ pictures }) {
   return (
-    <div className={`slideshow ${className}`}>
+    <div className="slideshow">
       <div className="pictures">
         {pictures.map((elt, index) => (
           <div key={`picture-${index}`} className="picture">

@@ -1,36 +1,33 @@
 @charset 'utf-8';
 
-// 1. Abstracts - Outils et helpers Sass
+// 1. Configuration and helpers
 @import 'abstracts/variables';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
 
-// 2. Vendors - Bibliothèques et frameworks externes
-// Create React App fournit @import-normalize pour la réinitialisation CSS
+// 2. Vendors
+// See : https://create-react-app.dev/docs/adding-css-reset/
 @import-normalize;
 
-// 3. Base - Styles standards
+// 3. Base stuff
 @import 'base/base';
 @import 'base/typography';
-// @import 'base/animations';
 
-// 4. Layout - Mise en page
+// 4. Layout-related section
 @import 'layout/Header';
 @import 'layout/Footer';
 
-// 5. Components - Composants
-// @import 'components/Logo';
-// @import 'components/Banner';
-// @import 'components/Card';
-// @import 'components/Collapse';
-@import 'components/Slideshow';
-@import 'components/Tags';
+// 5. Components
+// Each reusable component has its own Sass module
 
-// 6. Pages - Styles spécifiques des pages
+// 6. Page-specific styles
 @import 'pages/Home';
 @import 'pages/Rental';
 @import 'pages/About';
 @import 'pages/NotFound';
+
+// For component testing purpose
 @import 'pages/Test';
 
-// 7. Themes - Thèmes du site
+// 7. Themes
+// None defined
