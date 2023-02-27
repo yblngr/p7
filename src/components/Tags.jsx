@@ -1,8 +1,10 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import styles from './Tags.module.scss';
 
 function Tags({ tags, className }) {
   return (
-    <ul className={`tags ${className}`}>
+    <ul className={classNames(styles.default, className)}>
       {tags.map((tag, index) => (
         <li key={`tag-${index}`}>{tag}</li>
       ))}

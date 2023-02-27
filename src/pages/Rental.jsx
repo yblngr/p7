@@ -9,6 +9,7 @@ function Rental() {
   const rental = rentals.find((a) => a.id === id);
   if (rental === undefined) return <Navigate to="/404" replace={true} />;
   const { title, pictures, description, host, rating, location, equipments, tags } = rental;
+  rentals.map((r) => console.log(r.id, r.tags));
 
   return (
     <main className="rental">

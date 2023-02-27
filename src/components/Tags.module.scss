@@ -1,14 +1,16 @@
-.tags {
+@import '../styles/abstracts/variables';
+
+.default {
   display: flex;
-  column-gap: 10px;
-  //justify-content: flex-start;
-  //align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
 
   li {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 115px;
+    //min-width: 115px;
     height: 25px;
     background-color: $primary-color;
     color: $secondary-color;
@@ -16,6 +18,15 @@
     font-size: 14px;
     font-weight: 500;
     padding: 0 10px;
-    //flex: 1 0 auto;
+    white-space: nowrap;
+    flex: 0 0 115px;
+  }
+
+  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+    li {
+      flex: 0 0 84px;
+      height: 18px;
+      font-size: 10px;
+    }
   }
 }

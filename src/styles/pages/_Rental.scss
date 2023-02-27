@@ -7,6 +7,8 @@ main.rental {
   }
 
   .content-location {
+    width: 100%;
+    flex: 1 1 auto;
   }
 
   .title {
@@ -22,10 +24,15 @@ main.rental {
   }
 
   .content-host {
+    flex: 1 1 auto;
   }
 
   .host {
     display: flex;
+
+    img {
+      border-radius: 50%;
+    }
   }
 
   .rating {
@@ -40,11 +47,15 @@ main.rental {
 
   .collapse {
     --label-height: 52px;
-    width: 50%;
+    width: 100%;
   }
 
   @media screen and (width <= map-get($breakpoints, 'mobile')) {
+    @include sized(20px);
+
     .content-details {
+      flex-direction: column;
+      row-gap: 20px;
     }
   }
 }
