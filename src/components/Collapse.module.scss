@@ -1,8 +1,12 @@
 @import '../styles/abstracts/variables';
 
 .default {
-  .title {
-    height: 2.375em;
+  --label-height: 2.3em;
+
+  .button {
+    position: relative;
+    z-index: 1;
+    height: var(--label-height);
     display: flex;
     align-items: center;
     background-color: $primary-color;
@@ -21,17 +25,16 @@
     width: 1em;
     height: 1em;
     flex: none;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 280ms ease-in-out;
   }
 
   .collapse {
     position: relative;
-    z-index: -1;
     background-color: $tertiary-color;
     margin-top: -5px;
     border-radius: 0 0 5px 5px;
     overflow: hidden;
-    transition: height 0.2s ease-in-out;
+    transition: height 280ms ease-in-out;
   }
 
   .content {
@@ -40,8 +43,8 @@
   }
 
   @media screen and (width <= map-get($breakpoints, 'mobile')) {
-    .title {
-      height: 30px !important; // C'est moche... Mais comment écraser autrement la prop titleHeight ?
+    .button {
+      height: 30px;
       font-size: 13px;
     }
 

@@ -30,20 +30,16 @@ function Rental() {
         </div>
       </div>
       <div className="content-details">
-        <div className="description">
-          <Collapse title="Description" titleHeight="52px">
-            <p>{description}</p>
-          </Collapse>
-        </div>
-        <div className="equipments">
-          <Collapse title="&Eacute;quipements" titleHeight="52px">
-            <ul>
-              {equipments.map((equipment, index) => (
-                <li key={`equipment-${index}`}>{equipment}</li>
-              ))}
-            </ul>
-          </Collapse>
-        </div>
+        <Collapse className="collapse" label="Description">
+          <p>{description}</p>
+        </Collapse>
+        <Collapse className="collapse" label="&Eacute;quipements">
+          <ul>
+            {equipments.map((equipment, index) => (
+              <li key={`equipment-${index}`}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </main>
   );

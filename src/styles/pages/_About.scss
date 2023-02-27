@@ -10,6 +10,7 @@ main.about {
     font-size: 24px;
     width: 82.5%;
     margin: 31px auto;
+    --label-height: 57px;
   }
 
   @media screen and (width <= map-get($breakpoints, 'mobile')) {

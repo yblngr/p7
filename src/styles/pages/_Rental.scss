@@ -38,11 +38,8 @@ main.rental {
     column-gap: 76px;
   }
 
-  .description {
-    width: 50%;
-  }
-
-  .equipments {
+  .collapse {
+    --label-height: 52px;
     width: 50%;
   }
 

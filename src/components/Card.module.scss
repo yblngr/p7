@@ -23,7 +23,7 @@
     height: 100%;
     mix-blend-mode: multiply;
     transform: scale(1);
-    transition: transform 0.3s ease-out;
+    transition: transform 280ms ease-in-out;
   }
 
   &:hover img {
