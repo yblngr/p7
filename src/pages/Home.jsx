@@ -1,7 +1,7 @@
-import Banner from '../components/Banner'
-import Card from '../components/Card'
-import homeBanner from '../assets/images/home.webp'
-import rentals from '../assets/data/rentals.json'
+import Banner from '../components/Banner';
+import Card from '../components/Card';
+import homeBanner from '../assets/images/home.webp';
+import rentals from '../assets/data/rentals.json';
 
 function Home() {
   return (
@@ -13,7 +13,7 @@ function Home() {
         ))}
       </div>
     </main>
-  )
+  );
 }
 
-export default Home
+export default Home;

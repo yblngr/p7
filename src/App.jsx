@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Layout from './layout/Layout'
-import Home from './pages/Home'
-import Rental from './pages/Rental'
-import About from './pages/About'
-import NotFound from './pages/NotFound'
+import Layout from './layout/Layout';
+import Home from './pages/Home';
+import Rental from './pages/Rental';
+import About from './pages/About';
+import NotFound from './pages/NotFound';
 
-import Test from './test/Test'
+import Test from './test/Test';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route path="/test" element={<Test />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

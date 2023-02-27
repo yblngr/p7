@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
-import classNames from 'classnames'
-import PropTypes from 'prop-types'
-import styles from './Card.module.scss'
+import { Link } from 'react-router-dom';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import styles from './Card.module.scss';
 
 function Card({ id, title, cover, className }) {
   return (
@@ -11,7 +11,7 @@ function Card({ id, title, cover, className }) {
       </div>
       <p>{title}</p>
     </Link>
-  )
+  );
 }
 
 Card.propTypes = {
@@ -19,6 +19,6 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   cover: PropTypes.string.isRequired,
   className: PropTypes.string,
-}
+};
 
-export default Card
+export default Card;

@@ -1,5 +1,5 @@
-import './Test.scss'
-import Chevron from '../components/Chevron'
+import './Test.scss';
+import Chevron from '../components/Chevron';
 
 function Test() {
   return (
@@ -15,8 +15,9 @@ function Test() {
       <Chevron className="fleche" right />
       <span>Rotation</span>
       <Chevron className="fleche" diagonal />
+      <Chevron style={{ transform: 'rotate(45deg)' }} /> {/* Ne peut pas fonctionner */}
     </div>
-  )
+  );
 }
 
-export default Test
+export default Test;

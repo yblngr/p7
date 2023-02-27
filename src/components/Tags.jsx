@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 function Tags({ tags, className }) {
   return (
@@ -7,11 +7,11 @@ function Tags({ tags, className }) {
         <li key={`tag-${index}`}>{tag}</li>
       ))}
     </ul>
-  )
+  );
 }
 Tags.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   className: PropTypes.string,
-}
+};
 
-export default Tags
+export default Tags;

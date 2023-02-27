@@ -1,6 +1,6 @@
-import classNames from 'classnames'
-import PropTypes from 'prop-types'
-import styles from './Banner.module.scss'
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import styles from './Banner.module.scss';
 
 function Banner({ image, text, className }) {
   return (
@@ -10,13 +10,13 @@ function Banner({ image, text, className }) {
       </div>
       {text && <figcaption>{text}</figcaption>}
     </figure>
-  )
+  );
 }
 
 Banner.propTypes = {
   image: PropTypes.string.isRequired,
   text: PropTypes.string,
   className: PropTypes.string,
-}
+};
 
-export default Banner
+export default Banner;

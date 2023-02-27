@@ -1,7 +1,7 @@
 @import '../styles/abstracts/variables';
 
 .default {
-  .title-box {
+  .title {
     height: 2.375em;
     display: flex;
     align-items: center;
@@ -12,7 +12,7 @@
     cursor: pointer;
   }
 
-  .title {
+  .label {
     font-weight: 500;
     flex: 1 0 auto;
   }
@@ -21,20 +21,17 @@
     width: 1em;
     height: 1em;
     flex: none;
-    transform: none;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-in-out;
   }
 
-  .content-box {
+  .collapse {
     position: relative;
     z-index: -1;
     background-color: $tertiary-color;
     margin-top: -5px;
     border-radius: 0 0 5px 5px;
     overflow: hidden;
-    height: 0;
-    //max-height: 0;
-    transition: height 1s ease-out;
+    transition: height 0.2s ease-in-out;
   }
 
   .content {
@@ -43,12 +40,12 @@
   }
 
   @media screen and (width <= map-get($breakpoints, 'mobile')) {
-    .title-box {
+    .title {
       height: 30px !important; // C'est moche... Mais comment écraser autrement la prop titleHeight ?
       font-size: 13px;
     }
 
-    .content-box {
+    .collapse {
       font-size: 12px;
     }
   }

@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom'
-import Logo from '../components/Logo'
+import { NavLink } from 'react-router-dom';
+import Logo from '../components/Logo';
 
 function Header() {
   return (
@@ -16,7 +16,7 @@ function Header() {
         </ul>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

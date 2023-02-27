@@ -1,14 +1,14 @@
-import { useParams, Navigate } from 'react-router-dom'
-import rentals from '../assets/data/rentals.json'
-import Slideshow from '../components/Slideshow'
-import Tags from '../components/Tags'
-import Collapse from '../components/Collapse'
+import { useParams, Navigate } from 'react-router-dom';
+import rentals from '../assets/data/rentals.json';
+import Slideshow from '../components/Slideshow';
+import Tags from '../components/Tags';
+import Collapse from '../components/Collapse';
 
 function Rental() {
-  const { id } = useParams()
-  const rental = rentals.find((a) => a.id === id)
-  if (rental === undefined) return <Navigate to="/404" replace={true} />
-  const { title, pictures, description, host, rating, location, equipments, tags } = rental
+  const { id } = useParams();
+  const rental = rentals.find((a) => a.id === id);
+  if (rental === undefined) return <Navigate to="/404" replace={true} />;
+  const { title, pictures, description, host, rating, location, equipments, tags } = rental;
 
   return (
     <main className="rental">
@@ -46,7 +46,7 @@ function Rental() {
         </div>
       </div>
     </main>
-  )
+  );
 }
 
-export default Rental
+export default Rental;

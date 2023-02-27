@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import './Slideshow.scss'
+import PropTypes from 'prop-types';
+import './Slideshow.scss';
 
 function Slideshow({ pictures }) {
   return (
@@ -15,12 +15,12 @@ function Slideshow({ pictures }) {
       <div className="right-arrow"></div>
       <div className="index">1/5</div>
     </div>
-  )
+  );
 }
 
 Slideshow.propTypes = {
   pictures: PropTypes.arrayOf(PropTypes.string),
   className: PropTypes.string,
-}
+};
 
-export default Slideshow
+export default Slideshow;
