@@ -1,0 +1,36 @@
+@import '../styles/abstracts/variables';
+
+.default {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  p {
+    width: min-content;
+    font-weight: 500;
+    text-align: right;
+  }
+
+  div {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+    p {
+      font-size: 12px;
+    }
+
+    div {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

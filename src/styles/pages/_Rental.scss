@@ -1,14 +1,20 @@
 main.rental {
   @include sized(100px);
 
-  .content-header {
-    display: flex;
-    justify-content: space-between;
+  .slideshow {
+    margin-top: 20px;
+    height: 415px;
   }
 
-  .content-location {
-    width: 100%;
-    flex: 1 1 auto;
+  .overview {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  .property {
+    flex: auto;
   }
 
   .title {
@@ -23,39 +29,76 @@ main.rental {
     margin-top: 20px;
   }
 
-  .content-host {
-    flex: 1 1 auto;
-  }
-
-  .host {
+  .services {
+    margin-top: -6px;
     display: flex;
-
-    img {
-      border-radius: 50%;
-    }
+    flex-direction: column;
+    align-items: end;
+    row-gap: 24px;
+    flex: none;
   }
 
   .rating {
+    font-size: 30px;
   }
 
-  .content-details {
+  .details {
     margin-top: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     display: flex;
     column-gap: 76px;
   }
 
   .collapse {
     --label-height: 52px;
-    width: 100%;
+    margin-bottom: 5px;
+    width: 50%;
   }
 
   @media screen and (width <= map-get($breakpoints, 'mobile')) {
     @include sized(20px);
 
-    .content-details {
+    .slideshow {
+      height: 255px;
+    }
+
+    .overview {
+      margin-top: 15px;
+      flex-direction: column;
+    }
+
+    .title {
+      font-size: 18px;
+    }
+
+    .location {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .tags {
+      margin-top: 10px;
+    }
+
+    .services {
+      margin-top: 16px;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .rating {
+      font-size: 15px;
+    }
+    .details {
+      margin-top: 16px;
+      margin-bottom: 20px;
       flex-direction: column;
       row-gap: 20px;
+    }
+
+    .collapse {
+      width: auto;
     }
   }
 }

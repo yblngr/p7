@@ -1,0 +1,15 @@
+@import '../styles/abstracts/variables';
+
+.default {
+  display: flex;
+  column-gap: 10px;
+
+  .star {
+    width: 1em;
+    height: 1em;
+  }
+
+  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+    column-gap: 5px;
+  }
+}

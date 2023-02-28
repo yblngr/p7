@@ -3,14 +3,12 @@
 .default {
   display: flex;
   flex-wrap: wrap;
-
   gap: 10px;
 
   li {
     display: flex;
     justify-content: center;
     align-items: center;
-    //min-width: 115px;
     height: 25px;
     background-color: $primary-color;
     color: $secondary-color;

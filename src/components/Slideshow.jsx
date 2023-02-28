@@ -1,13 +1,14 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import './Slideshow.scss';
+import styles from './Slideshow.module.scss';
 
-function Slideshow({ pictures }) {
+function Slideshow({ pictures, className }) {
   return (
-    <div className="slideshow">
+    <div className={classNames(styles.default, className)}>
       <div className="pictures">
         {pictures.map((elt, index) => (
           <div key={`picture-${index}`} className="picture">
-            <img src={elt} />
+            {/* <img src={elt} /> */}
           </div>
         ))}
       </div>

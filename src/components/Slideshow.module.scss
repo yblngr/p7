@@ -1,10 +1,7 @@
-.slideshow {
-  height: 415px; //415
+.default {
   background: lightgray;
   border-radius: 25px;
   overflow: hidden;
-  margin-top: 20px;
-  margin-bottom: 30px;
 
   .pictures {
     display: flex;
@@ -15,6 +12,6 @@
   }
 
   .picture img {
-    object-fit: contain;
+    object-fit: cover;
   }
 }

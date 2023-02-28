@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './Chevron.module.scss';
 
-function Chevron({ className, left, up, right }) {
+function Chevron({ left, up, right, className }) {
   let orientation = 'none';
   if (left && !up && !right) orientation = 'rotate(90deg)';
   if (!left && up && !right) orientation = 'rotate(-180deg)';
@@ -13,10 +13,10 @@ function Chevron({ className, left, up, right }) {
 }
 
 Chevron.propTypes = {
-  className: PropTypes.string,
   left: PropTypes.bool,
   up: PropTypes.bool,
   right: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default Chevron;
