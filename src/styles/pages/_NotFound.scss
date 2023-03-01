@@ -22,7 +22,7 @@ main.not-found {
     margin-bottom: 159px;
   }
 
-  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+  @include for-mobile {
     @include sized(20px);
 
     div {

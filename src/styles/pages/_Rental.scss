@@ -33,7 +33,7 @@ main.rental {
     margin-top: -6px;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     row-gap: 24px;
     flex: none;
   }
@@ -55,7 +55,7 @@ main.rental {
     width: 50%;
   }
 
-  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+  @include for-mobile {
     @include sized(20px);
 
     .slideshow {

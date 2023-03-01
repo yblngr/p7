@@ -10,6 +10,12 @@
   margin-right: auto;
 }
 
+@mixin for-mobile {
+  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+    @content;
+  }
+}
+
 /// Conteneur flex et centrage des éléments flex
 /// @param {Boolean} $justify-content [true] - éléments centrés sur l'axe principal
 /// @param {Boolean} $align-items [true] - éléments centrés sur l'axe secondaire

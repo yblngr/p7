@@ -9,7 +9,11 @@ function Chevron({ left, up, right, className }) {
   if (!left && up && !right) orientation = 'rotate(-180deg)';
   if (!left && !up && right) orientation = 'rotate(-90deg)';
 
-  return <ChevronSvg className={classNames(styles.default, className)} style={{ transform: orientation }} />;
+  return (
+    <div className={classNames(styles.default, className)} style={{ transform: orientation }}>
+      <ChevronSvg className={styles.svg} />
+    </div>
+  );
 }
 
 Chevron.propTypes = {

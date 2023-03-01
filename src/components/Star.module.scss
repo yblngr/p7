@@ -1,9 +1,14 @@
 .default {
-  width: 10px;
-  height: 10px;
-  fill: currentcolor;
-}
+  display: flex;
+  align-items: center;
+  width: 1em;
+  height: 1em;
 
-.off {
-  fill: #e3e3e3;
+  .svg {
+    fill: currentcolor;
+  }
+
+  .off {
+    fill: #e3e3e3;
+  }
 }

@@ -1,4 +1,5 @@
 @import '../styles/abstracts/variables';
+@import '../styles/abstracts/mixins';
 
 .default {
   --label-height: 2.3em;
@@ -22,8 +23,6 @@
   }
 
   .chevron {
-    width: 1em;
-    height: 1em;
     flex: none;
     transition: transform 280ms ease-in-out;
   }
@@ -42,7 +41,7 @@
     padding-top: calc(1em + 5px);
   }
 
-  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+  @include for-mobile {
     .button {
       height: 30px;
       font-size: 13px;

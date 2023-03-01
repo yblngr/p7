@@ -19,7 +19,9 @@ footer {
     margin-top: 29px;
   }
 
-  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+  @include for-mobile {
+    @include sized(20px);
+
     padding-top: 62px;
     padding-bottom: 62px;
 

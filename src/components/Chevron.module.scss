@@ -1,5 +1,10 @@
 .default {
-  width: 16.967px;
-  height: 10px;
-  fill: currentcolor;
+  display: flex;
+  align-items: center;
+  width: 1em;
+  height: 1em;
+
+  .svg {
+    fill: currentcolor;
+  }
 }

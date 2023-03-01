@@ -24,8 +24,9 @@ header {
     text-decoration: underline;
   }
 
-  @media screen and (width <= map-get($breakpoints,'mobile')) {
+  @include for-mobile {
     @include sized(20px);
+
     margin-top: 20px;
 
     .logo {

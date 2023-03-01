@@ -21,8 +21,9 @@ main.home {
     color: $secondary-color;
   }
 
-  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+  @include for-mobile {
     @include sized(20px);
+
     margin: 16px auto;
 
     .banner {

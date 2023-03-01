@@ -4,7 +4,7 @@ function NotFound() {
   return (
     <main className="not-found">
       <div>404</div>
-      <p>Oups! La page que vous demandez n'existe pas.</p>
+      <p>Oups! La page que vous demandez n&apos;existe pas.</p>
       <div className="link">
         <Link to="/">Retourner sur la page d’accueil</Link>
       </div>

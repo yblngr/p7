@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import styles from './Star.module.scss';
 
 function Star({ off, className }) {
-  return <StarSvg className={classNames.bind(styles)(styles.default, { off: off }, className)} />;
+  return (
+    <div className={classNames(styles.default, className)}>
+      <StarSvg className={classNames.bind(styles)(styles.svg, { off: off })} />
+    </div>
+  );
 }
 
 Star.propTypes = {

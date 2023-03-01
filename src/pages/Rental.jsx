@@ -8,10 +8,9 @@ import Collapse from '../components/Collapse';
 
 function Rental() {
   const { id } = useParams();
-  const rental = rentals.find((obj) => obj.id === id);
+  const rental = rentals.find((rental) => rental.id === id);
   if (rental === undefined) return <Navigate to="/404" replace={true} />;
   const { title, pictures, description, host, rating, location, equipments, tags } = rental;
-  console.log(pictures[0]);
 
   return (
     <main className="rental">
