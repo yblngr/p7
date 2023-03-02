@@ -1,9 +1,23 @@
+import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Banner from '../components/Banner';
 import Collapse from '../components/Collapse';
 import aboutBanner from '../assets/images/about.webp';
-import about from '../assets/data/about.json';
 
 function About() {
+  const [about, setAbout] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch('/data/about.json')
+      .then((response) => response.json())
+      .then((response) => setAbout(response))
+      .catch((error) => {
+        console.error('Error fetching data :\n', error.message);
+        navigate('/404', { replace: true });
+      });
+  }, []);
+
   return (
     <main className="about">
       <Banner className="banner" image={aboutBanner} />

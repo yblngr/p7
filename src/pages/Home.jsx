@@ -1,9 +1,23 @@
+import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
 import homeBanner from '../assets/images/home.webp';
-import rentals from '../assets/data/rentals.json';
 
 function Home() {
+  const [rentals, setRentals] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch('/data/rentals.json')
+      .then((response) => response.json())
+      .then((response) => setRentals(response))
+      .catch((error) => {
+        console.error('Error fetching data :\n', error.message);
+        navigate('/404', { replace: true });
+      });
+  }, []);
+
   return (
     <main className="home">
       <Banner className="banner" image={homeBanner} text="Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs" />

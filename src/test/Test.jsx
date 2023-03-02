@@ -1,28 +1,34 @@
+import { useState } from 'react';
+import { useEffect } from 'react';
 import './Test.scss';
-import Chevron from '../components/Chevron';
-//import Star from '../components/Star';
-//import Rating from '../components/Rating';
-//import Picture from '../components/Picture';
-// import image from '../assets/images/about.webp';
 
 function Test() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/about.json')
+      .then((response) => response.json())
+      .then((response) => {
+        const myvalue = response;
+        console.log('MYVAL', myvalue);
+        setData(myvalue);
+      });
+  }, []);
+
+  const infos = 'Mais quoi mettre ?';
+
+  console.log('DATAAAAAAAAAAAA', data);
   return (
-    <>
+    <div>
+      <p>{infos}</p>
       <div>
-        <h1>Page de test</h1>
-        <hr />
-        <Chevron up />
-        <Chevron />
-        <div style={{ fontSize: '48px' }}>
-          <Chevron className="mySizedChevron" />
-          <Chevron />
-        </div>
+        {infos}
+        <br />
+        {data.map((x, id) => (
+          <p key={id}>{x.label}</p>
+        ))}
       </div>
-      <hr />
-      {/* <Picture src={image} alt="Ma photo" />
-      <hr />
-      <img src={image} alt="Mon image" /> */}
-    </>
+    </div>
   );
 }
 
