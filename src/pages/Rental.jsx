@@ -5,8 +5,11 @@ import Tags from '../components/Tags';
 import Host from '../components/Host';
 import Rating from '../components/Rating';
 import Collapse from '../components/Collapse';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import styles from './Rental.module.scss';
 
-function Rental() {
+function Rental(className) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [rental, setRental] = useState();
@@ -28,24 +31,24 @@ function Rental() {
   const { title, pictures, description, host, rating, location, equipments, tags } = rental ? rental : {};
   return (
     rental && (
-      <main className="rental">
-        <Slideshow className="slideshow" pictures={pictures} />
-        <div className="overview">
-          <div className="property">
-            <h1 className="title">{title}</h1>
-            <p className="location">{location}</p>
-            <Tags className="tags" tags={tags}></Tags>
+      <main className={classNames(styles.default, className)}>
+        <Slideshow className={styles.slideshow} pictures={pictures} />
+        <div className={styles.overview}>
+          <div className={styles.property}>
+            <h1 className={styles.title}>{title}</h1>
+            <p className={styles.location}>{location}</p>
+            <Tags className={styles.tags} tags={tags}></Tags>
           </div>
-          <div className="services">
+          <div className={styles.services}>
             <Host host={host} />
-            <Rating className="rating" value={rating} />
+            <Rating className={styles.rating} value={rating} />
           </div>
         </div>
-        <div className="details">
-          <Collapse className="collapse" label="Description">
+        <div className={styles.details}>
+          <Collapse className={styles.collapse} label="Description">
             <p>{description}</p>
           </Collapse>
-          <Collapse className="collapse" label="&Eacute;quipements">
+          <Collapse className={styles.collapse} label="&Eacute;quipements">
             <ul>
               {equipments.map((equipment, index) => (
                 <li key={`equipment-${index}`}>{equipment}</li>
@@ -57,5 +60,9 @@ function Rental() {
     )
   );
 }
+
+Rental.propTypes = {
+  className: PropTypes.string,
+};
 
 export default Rental;

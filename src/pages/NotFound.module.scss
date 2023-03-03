@@ -1,4 +1,7 @@
-main.not-found {
+@import '../styles/abstracts/variables';
+@import '../styles/abstracts/mixins';
+
+.default {
   @include sized(100px);
   text-align: center;
 

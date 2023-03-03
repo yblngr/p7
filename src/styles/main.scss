@@ -1,3 +1,5 @@
+// Inspired by Sass 7-1 pattern
+
 @charset 'utf-8';
 
 // 1. Configuration and helpers
@@ -13,18 +15,10 @@
 @import 'base/base';
 @import 'base/typography';
 
+// Sections 4, 5 and 6 are empty, since React components have their own Sass style modules
 // 4. Layout-related section
-@import 'layout/Header';
-@import 'layout/Footer';
-
 // 5. Components
-// Each reusable component has its own Sass module
-
 // 6. Page-specific styles
-@import 'pages/Home';
-@import 'pages/Rental';
-@import 'pages/About';
-@import 'pages/NotFound';
 
 // 7. Themes
 // None defined

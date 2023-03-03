@@ -1,4 +1,7 @@
-footer {
+@import '../styles/abstracts/variables';
+@import '../styles/abstracts/mixins';
+
+.default {
   color: $secondary-color;
   background-color: $quaternary-color;
   display: flex;
@@ -21,7 +24,6 @@ footer {
 
   @include for-mobile {
     @include sized(20px);
-
     padding-top: 62px;
     padding-bottom: 62px;
 

@@ -5,9 +5,7 @@ import Chevron from '../components/Chevron';
 import styles from './Slideshow.module.scss';
 
 function Slideshow({ pictures, className }) {
-  //console.log(pictures);
   const nbPictures = pictures.length;
-  //console.log('NB PICS :', nbPictures);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (

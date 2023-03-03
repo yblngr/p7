@@ -3,8 +3,11 @@ import { useState, useEffect } from 'react';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
 import homeBanner from '../assets/images/home.webp';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import styles from './Home.module.scss';
 
-function Home() {
+function Home(className) {
   const [rentals, setRentals] = useState([]);
   const navigate = useNavigate();
 
@@ -19,15 +22,19 @@ function Home() {
   }, []);
 
   return (
-    <main className="home">
-      <Banner className="banner" image={homeBanner} text="Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs" />
-      <div className="cardset">
+    <main className={classNames(styles.default, className)}>
+      <Banner className={styles.banner} image={homeBanner} text="Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs" />
+      <div className={styles.cardset}>
         {rentals.map(({ id, title, cover }) => (
-          <Card className="card" key={id} id={id} title={title} cover={cover} />
+          <Card className={styles.card} key={id} id={id} title={title} cover={cover} />
         ))}
       </div>
     </main>
   );
 }
+
+Home.propTypes = {
+  className: PropTypes.string,
+};
 
 export default Home;

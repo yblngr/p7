@@ -1,4 +1,7 @@
-header {
+@import '../styles/abstracts/variables';
+@import '../styles/abstracts/mixins';
+
+.default {
   @include sized(100px);
   margin-top: 40px;
   display: flex;

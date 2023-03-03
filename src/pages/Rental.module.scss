@@ -1,4 +1,7 @@
-main.rental {
+@import '../styles/abstracts/variables';
+@import '../styles/abstracts/mixins';
+
+.default {
   @include sized(100px);
 
   .slideshow {
