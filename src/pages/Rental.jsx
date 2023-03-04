@@ -1,15 +1,14 @@
-import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Slideshow from '../components/Slideshow';
-import Tags from '../components/Tags';
+import { useParams, useNavigate } from 'react-router-dom';
+
+import Collapse from '../components/Collapse';
 import Host from '../components/Host';
 import Rating from '../components/Rating';
-import Collapse from '../components/Collapse';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
+import Slideshow from '../components/Slideshow';
+import Tags from '../components/Tags';
 import styles from './Rental.module.scss';
 
-function Rental(className) {
+function Rental() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [rental, setRental] = useState();
@@ -31,17 +30,17 @@ function Rental(className) {
   const { title, pictures, description, host, rating, location, equipments, tags } = rental ? rental : {};
   return (
     rental && (
-      <main className={classNames(styles.default, className)}>
+      <main className={styles.default}>
         <Slideshow className={styles.slideshow} pictures={pictures} />
         <div className={styles.overview}>
           <div className={styles.property}>
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.location}>{location}</p>
-            <Tags className={styles.tags} tags={tags}></Tags>
+            <Tags tags={tags}></Tags>
           </div>
           <div className={styles.services}>
             <Host host={host} />
-            <Rating className={styles.rating} value={rating} />
+            <Rating value={rating} />
           </div>
         </div>
         <div className={styles.details}>
@@ -60,9 +59,5 @@ function Rental(className) {
     )
   );
 }
-
-Rental.propTypes = {
-  className: PropTypes.string,
-};
 
 export default Rental;

@@ -1,0 +1,52 @@
+//@import 'abstracts/variables';
+//@import 'abstracts/mixins';
+
+// Sass variables
+
+// Default font stack
+$font-stack: 'Montserrat', sans-serif;
+
+// Graphic identity colors
+$primary-color: #ff6060;
+$secondary-color: white;
+$tertiary-color: #f6f6f6;
+
+// Breakpoints
+$breakpoints: (
+  'min': 240px,
+  'narrow': 330px,
+  'mobile': 768px,
+  'tablet': 992px,
+  'max': 1600px,
+);
+
+// Sass mixins
+
+/// Content width limitation and automatic centering
+/// @param {Length} $padding [0px] left and right padding
+@mixin sized($padding: 0px) {
+  max-width: map-get($breakpoints, 'max');
+  padding-left: $padding;
+  padding-right: $padding;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/// Media queries
+@mixin for-tablet {
+  @media screen and (width <= map-get($breakpoints, 'tablet')) {
+    @content;
+  }
+}
+
+@mixin for-mobile {
+  @media screen and (width <= map-get($breakpoints, 'mobile')) {
+    @content;
+  }
+}
+
+@mixin for-narrow {
+  @media screen and (width <= map-get($breakpoints, 'narrow')) {
+    @content;
+  }
+}

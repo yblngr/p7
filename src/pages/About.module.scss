@@ -1,30 +1,42 @@
-@import '../styles/abstracts/variables';
-@import '../styles/abstracts/mixins';
+@import '../styles/abstracts/abstracts';
 
 .default {
   @include sized(100px);
+  width: 100%;
+  margin: 40px auto;
+}
 
-  margin-top: 44px;
+.banner {
+  height: 225px;
+}
 
-  .banner {
-    height: 223px;
+.collapse {
+  width: 82.5%;
+  --label-height: 60px;
+  margin: 30px auto 35px;
+  font-size: 24px;
+}
+
+@include for-tablet {
+  .default {
+    @include sized(40px);
   }
 
   .collapse {
-    font-size: 24px;
-    width: 82.5%;
-    margin: 31px auto;
-    --label-height: 57px;
+    width: 100%;
+    --label-height: 45px;
+    font-size: 18px;
+  }
+}
+
+@include for-mobile {
+  .default {
+    @include sized(20px);
+    margin: 20px auto;
   }
 
-  @include for-mobile {
-    @include sized(20px);
-
-    margin-top: 17px;
-
-    .collapse {
-      width: 100%;
-      margin: 20px auto;
-    }
+  .collapse {
+    width: 100%;
+    margin: 20px auto;
   }
 }

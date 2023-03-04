@@ -245,7 +245,7 @@
     },
     "rating": "3",
     "location": "Île de France - Paris 3ème",
-    "equipments": ["Rangements", "Lit", "Sèche-cheveux", "Wi-fi", "TV", "Bouilloire"],
+    "equipments": ["Rangements", "Lit", "Sèche-cheveux", "Wi-fi", "Télévision", "Bouilloire"],
     "tags": ["Marais", "République", "Studio", "Proche métros", "Commerces"]
   },
   {
@@ -323,7 +323,7 @@
       "Cuisine équipée",
       "Frigo",
       "Wi-fi",
-      "TV",
+      "Télévision",
       "Cintres",
       "Four",
       "Micro-ondes",

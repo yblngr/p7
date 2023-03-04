@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
+
 import Chevron from '../components/Chevron';
 import styles from './Slideshow.module.scss';
 

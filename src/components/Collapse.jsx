@@ -1,18 +1,19 @@
 import { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+
 import Chevron from '../components/Chevron';
 import styles from './Collapse.module.scss';
 
 function Collapse({ label, children, className }) {
   const [isOpen, setIsOpen] = useState(false);
   const [height, setHeight] = useState(0);
-  const collapse = useRef(null);
+  const collapsible = useRef(null);
   const resizeObserver = new ResizeObserver((entries) => setHeight(entries[0].borderBoxSize[0].blockSize));
 
   useEffect(() => {
     if (!isOpen) setHeight(0);
-    else resizeObserver.observe(collapse.current);
+    else resizeObserver.observe(collapsible.current);
   }, [isOpen, height]);
 
   return (
@@ -21,8 +22,8 @@ function Collapse({ label, children, className }) {
         <p className={styles.label}>{label}</p>
         <Chevron className={styles.chevron} up={isOpen} />
       </div>
-      <div className={styles.collapse} style={{ height }}>
-        <div className={styles.content} ref={collapse}>
+      <div className={styles.collapsible} style={{ height }}>
+        <div className={styles.content} ref={collapsible}>
           {children}
         </div>
       </div>

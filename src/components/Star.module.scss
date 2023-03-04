@@ -1,14 +1,14 @@
 .default {
-  display: flex;
-  align-items: center;
   width: 1em;
   height: 1em;
+  display: flex;
+  align-items: center;
+}
 
-  .svg {
-    fill: currentcolor;
-  }
+.svg {
+  fill: currentcolor;
+}
 
-  .off {
-    fill: #e3e3e3;
-  }
+.off {
+  filter: grayscale(100%) brightness(175%);
 }

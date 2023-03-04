@@ -1,10 +1,10 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+
 import styles from './Host.module.scss';
 
-function Host({ host, className }) {
+function Host({ host }) {
   return (
-    <div className={classNames(styles.default, className)}>
+    <div className={styles.default}>
       <p>{host.name}</p>
       <div>
         <img src={host.picture} alt={host.name} />
@@ -18,7 +18,6 @@ Host.propTypes = {
     name: PropTypes.string,
     picture: PropTypes.string,
   }).isRequired,
-  className: PropTypes.string,
 };
 
 export default Host;

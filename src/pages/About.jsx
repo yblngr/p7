@@ -1,13 +1,12 @@
-import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import Banner from '../components/Banner';
 import Collapse from '../components/Collapse';
-import aboutBanner from '../assets/images/about.webp';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
+import aboutBanner from '../assets/about.webp';
 import styles from './About.module.scss';
 
-function About(className) {
+function About() {
   const [about, setAbout] = useState([]);
   const navigate = useNavigate();
 
@@ -22,7 +21,7 @@ function About(className) {
   }, []);
 
   return (
-    <main className={classNames(styles.default, className)}>
+    <main className={styles.default}>
       <Banner className={styles.banner} image={aboutBanner} />
       {about.map(({ label, article }, index) => (
         <Collapse className={styles.collapse} key={`about-${index}`} label={label}>
@@ -32,9 +31,5 @@ function About(className) {
     </main>
   );
 }
-
-About.propTypes = {
-  className: PropTypes.string,
-};
 
 export default About;

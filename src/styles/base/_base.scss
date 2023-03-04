@@ -1,8 +1,8 @@
 /*
-** Styles de base
+** Basic styles
 */
 
-// Modèle de boîte
+// Box model
 html {
   box-sizing: border-box;
 }
@@ -13,7 +13,7 @@ html {
   box-sizing: inherit;
 }
 
-// Suppression des marges des éléments
+// Removing element margins
 body,
 figure,
 h1,
@@ -23,20 +23,25 @@ ul {
   margin: 0;
 }
 
-// Listes sans puces, ni numérotation, ni retrait
+// Lists without bullets, numbering or indentation
 ol,
 ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-// Ancres
+// Anchors
 a {
-  color: $primary-color;
+  color: currentcolor;
   text-decoration: none;
+
+  &:hover,
+  &.active {
+    text-decoration: underline;
+  }
 }
 
-// Corps de la page : couleurs par défaut et largeur minimale
+// Page body: default colors and minimum width
 body {
   background-color: $secondary-color;
   color: $primary-color;

@@ -1,43 +1,52 @@
-@import '../styles/abstracts/variables';
-@import '../styles/abstracts/mixins';
+@import '../styles/abstracts/abstracts';
 
 .default {
   @include sized(100px);
-  margin: 63px auto;
+  width: 100%;
+  margin: 60px auto;
+  color: $secondary-color;
+}
 
-  .banner {
-    height: 223px;
-    color: $secondary-color;
+.banner {
+  height: 225px;
+}
+
+.cardset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 40px;
+  padding: 50px;
+  border-radius: 25px;
+  background-color: $tertiary-color;
+}
+
+@include for-tablet {
+  .default {
+    @include sized(40px);
+    margin: 40px auto;
   }
 
   .cardset {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px 60px;
-    margin-top: 43px;
-    background-color: $tertiary-color;
-    border-radius: 25px;
-    padding: 56px 50px;
+    gap: 30px;
+    padding: 30px;
   }
+}
 
-  .card {
-    color: $secondary-color;
-  }
-
-  @include for-mobile {
+@include for-mobile {
+  .default {
     @include sized(20px);
+    margin: 20px auto;
+  }
 
-    margin: 16px auto;
+  .banner {
+    height: 120px;
+  }
 
-    .banner {
-      height: 111px;
-    }
-
-    .cardset {
-      margin-top: 22px;
-      padding: 0;
-      gap: 20px;
-      background-color: unset;
-    }
+  .cardset {
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0;
+    background-color: unset;
   }
 }

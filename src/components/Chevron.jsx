@@ -1,6 +1,7 @@
-import { ReactComponent as ChevronSvg } from '../assets/images/chevron.svg';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+
+import { ReactComponent as ChevronSvg } from './Chevron.svg';
 import styles from './Chevron.module.scss';
 
 function Chevron({ left, up, right, className }) {

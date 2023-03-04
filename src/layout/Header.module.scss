@@ -1,49 +1,62 @@
-@import '../styles/abstracts/variables';
-@import '../styles/abstracts/mixins';
+@import '../styles/abstracts/abstracts';
 
 .default {
   @include sized(100px);
-  margin-top: 40px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  .logo {
-    flex: none;
-  }
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 500;
 
   ul {
     display: flex;
     gap: 60px;
   }
+}
 
-  li {
-    font-size: 24px;
-    font-weight: 500;
+.logo {
+  flex: none;
+}
+
+@include for-tablet {
+  .default {
+    @include sized(40px);
   }
+}
 
-  a.active,
-  a:hover {
-    text-decoration: underline;
-  }
-
-  @include for-mobile {
+@include for-mobile {
+  .default {
     @include sized(20px);
-
     margin-top: 20px;
-
-    .logo {
-      width: 145px;
-      height: 47px;
-    }
+    font-size: 12px;
+    text-transform: uppercase;
 
     ul {
       gap: 12px;
     }
+  }
 
-    li {
-      font-size: 12px;
-      text-transform: uppercase;
+  .logo {
+    width: 145px;
+    height: 47px;
+  }
+}
+
+@include for-narrow {
+  .default {
+    @include sized(10px);
+
+    ul {
+      flex-direction: column;
+      text-align: right;
+      gap: 6px;
     }
+  }
+
+  .logo {
+    width: 105px;
+    height: 34px;
   }
 }

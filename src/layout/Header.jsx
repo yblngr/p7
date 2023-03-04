@@ -1,12 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import styles from './Header.module.scss';
-import Logo from '../components/Logo';
 
-function Header(className) {
+import Logo from '../components/Logo';
+import styles from './Header.module.scss';
+
+function Header() {
   return (
-    <header className={classNames(styles.default, className)}>
+    <header className={styles.default}>
       <Logo className={styles.logo} />
       <nav>
         <ul>
@@ -21,9 +20,5 @@ function Header(className) {
     </header>
   );
 }
-
-Header.propTypes = {
-  className: PropTypes.string,
-};
 
 export default Header;

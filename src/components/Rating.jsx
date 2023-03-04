@@ -1,18 +1,17 @@
-import Star from '../components/Star';
-
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+
+import Star from '../components/Star';
 import styles from './Rating.module.scss';
 
-function Rating({ value, className }) {
+function Rating({ value }) {
   const numValue = parseInt(value);
   const starsArray = [];
   for (let i = 1; i <= 5; i++) starsArray.push(i > numValue);
 
   return (
-    <div className={classNames(styles.default, className)}>
+    <div className={styles.default}>
       {starsArray.map((off, index) => (
-        <Star className={styles.star} key={`star-${index}`} off={off} />
+        <Star key={`star-${index}`} off={off} />
       ))}
     </div>
   );
@@ -20,7 +19,6 @@ function Rating({ value, className }) {
 
 Rating.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  className: PropTypes.string,
 };
 
 export default Rating;

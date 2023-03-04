@@ -1,28 +1,25 @@
-@import '../styles/abstracts/variables';
-@import '../styles/abstracts/mixins';
+@import '../styles/abstracts/abstracts';
 
 .default {
   @include sized(100px);
+  width: 100%;
+  margin: 160px auto;
+  font-weight: 500;
   text-align: center;
 
   div {
     font-size: 288px;
     font-weight: 700;
-    margin-top: 169px;
   }
 
   p {
+    margin-top: 60px;
+    margin-bottom: 180px;
     font-size: 36px;
-    font-weight: 500;
-    margin-top: 66px;
   }
 
-  .link {
-    font-size: 18px;
-    font-weight: 500;
+  a {
     text-decoration: underline;
-    margin-top: 182px;
-    margin-bottom: 159px;
   }
 
   @include for-mobile {
@@ -30,18 +27,16 @@
 
     div {
       font-size: 96px;
-      margin-top: 195px;
     }
 
     p {
+      margin-top: 12px;
+      margin-bottom: 120px;
       font-size: 18px;
-      margin-top: 11px;
     }
 
-    .link {
+    a {
       font-size: 14px;
-      margin-top: 133px;
-      margin-bottom: 235px;
     }
   }
 }

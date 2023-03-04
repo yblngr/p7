@@ -1,16 +1,12 @@
-@import '../styles/abstracts/variables';
-@import '../styles/abstracts/mixins';
+@import '../styles/abstracts/abstracts';
 
 .default {
   display: flex;
   column-gap: 10px;
-
-  .star {
-    width: 1em;
-    height: 1em;
-  }
+  font-size: 30px;
 
   @include for-mobile {
     column-gap: 5px;
+    font-size: 15px;
   }
 }
