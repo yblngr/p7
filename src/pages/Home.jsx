@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 import Banner from '../components/Banner';
 import Card from '../components/Card';
@@ -7,18 +6,7 @@ import homeBanner from '../assets/home.webp';
 import styles from './Home.module.scss';
 
 function Home() {
-  const [rentals, setRentals] = useState([]);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetch('/data/rentals.json')
-      .then((response) => response.json())
-      .then((response) => setRentals(response))
-      .catch((error) => {
-        console.error('Error fetching data :\n', error.message);
-        navigate('/404', { replace: true });
-      });
-  }, []);
+  const rentals = useLoaderData();
 
   return (
     <main className={styles.default}>
