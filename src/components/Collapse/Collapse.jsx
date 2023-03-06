@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import Chevron from '../components/Chevron';
+import Chevron from '../Chevron/Chevron';
 import styles from './Collapse.module.scss';
 
 function Collapse({ label, children, className }) {

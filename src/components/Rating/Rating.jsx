@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import Star from '../components/Star';
+import Star from '../Star/Star';
 import styles from './Rating.module.scss';
 
 function Rating({ value }) {

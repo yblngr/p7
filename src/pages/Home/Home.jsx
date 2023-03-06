@@ -1,8 +1,8 @@
 import { useLoaderData } from 'react-router-dom';
 
-import Banner from '../components/Banner';
-import Card from '../components/Card';
-import homeBanner from '../assets/home.webp';
+import Banner from '../../components/Banner/Banner';
+import Card from '../../components/Card/Card';
+import homeBanner from '../../assets/home.webp';
 import styles from './Home.module.scss';
 
 function Home() {

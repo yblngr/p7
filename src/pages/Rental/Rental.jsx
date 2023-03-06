@@ -1,10 +1,10 @@
 import { useLoaderData } from 'react-router-dom';
 
-import Collapse from '../components/Collapse';
-import Host from '../components/Host';
-import Rating from '../components/Rating';
-import Slideshow from '../components/Slideshow';
-import Tags from '../components/Tags';
+import Collapse from '../../components/Collapse/Collapse';
+import Host from '../../components/Host/Host';
+import Rating from '../../components/Rating/Rating';
+import Slideshow from '../../components/Slideshow/Slideshow';
+import Tags from '../../components/Tags/Tags';
 import styles from './Rental.module.scss';
 
 function Rental() {
